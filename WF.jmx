@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
+<jmeterTestPlan version="1.2" properties="2.6" jmeter="2.11 r1554548">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="WFRest" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -41,7 +41,7 @@ ${__setProperty(rampup, ${__CSVRead(thread_params.csv,2)})};</stringProp>
         <stringProp name="filename">WF_params.csv</stringProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
-        <stringProp name="shareMode">All threads</stringProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
         <boolProp name="stopThread">false</boolProp>
         <stringProp name="variableNames">WF_prefix,WF_login,base_url,base_path,username,password,user_profile,user_id,project_type,project_from</stringProp>
       </CSVDataSet>
@@ -110,7 +110,7 @@ ${__setProperty(rampup, ${__CSVRead(thread_params.csv,2)})};</stringProp>
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Get OAUTH" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Get OAUTH step" enabled="true"/>
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -203,11 +203,11 @@ ${__setProperty(rampup, ${__CSVRead(thread_params.csv,2)})};</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </SetupThreadGroup>
       <hashTree>
-        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Get OAUTH" enabled="true">
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="getOAUTH" enabled="true">
           <collectionProp name="ModuleController.node_path">
             <stringProp name="-1227702913">WorkBench</stringProp>
             <stringProp name="-1737041085">WFRest</stringProp>
-            <stringProp name="1312260365">Get OAUTH</stringProp>
+            <stringProp name="897127935">Get OAUTH step</stringProp>
           </collectionProp>
         </ModuleController>
         <hashTree/>
@@ -244,7 +244,7 @@ ${__setProperty(rampup, ${__CSVRead(thread_params.csv,2)})};</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Get OAUTH" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="get OAUTH" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -654,7 +654,7 @@ ${__setProperty(rampup, ${__CSVRead(thread_params.csv,2)})};</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Get OAUTH" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="get OAUTH" enabled="true"/>
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -899,11 +899,11 @@ ${__setProperty(rampup, ${__CSVRead(thread_params.csv,2)})};</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
-        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Get OAUTH" enabled="true">
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="get OAUTH" enabled="true">
           <collectionProp name="ModuleController.node_path">
             <stringProp name="-1227702913">WorkBench</stringProp>
             <stringProp name="-1737041085">WFRest</stringProp>
-            <stringProp name="1312260365">Get OAUTH</stringProp>
+            <stringProp name="-691707603">get OAUTH</stringProp>
           </collectionProp>
         </ModuleController>
         <hashTree/>
